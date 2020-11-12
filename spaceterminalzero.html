@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body class="project-body">
+    <div class="header">
+		<ul class="header-list">
+			<a href="index.html">
+				<div class="headerL">
+					<li>Home</li>
+				</div>
+			</a>	
+			<a href="about.html">
+				<div class="headerL2">
+					<li>About</li>
+				</div>
+			</a>	
+			<a href="index.html"><img src="images/logo.png" width="220" height="63" class="logo" alt="picture of website logo"></a>
+			<a href="projects.html">
+				<div class="headerR">
+					<li>Projects</li>
+				</div>
+			</a>	
+			<a href="social.html">
+				<div class="headerR2">
+					<li>Social</li>
+				</div>
+			</a>
+		</ul>
+    </div>
+	<div class="topSPACETERMINALZEROimage">
+		<h2>Space Terminal Zero</h2>
+    </div>
+	<img src="images/lm-side.PNG" width="15" height="1800" class="side-bar">
+    <div class="main-content">
+		<h3>The GMTK GameJam 2020</h3>
+		<p class = "spaceterminalzero-p-1">The theme for the GameMakersToolKit GameJam 2020 was 'out of control' so me and a friend worked on creating a game where the controls change everytime. The game is a mix of manning a spaceship, making sure to put out fires (both litterally and metaphorically) and reading the instruction manual to learn how to put out said fires.</p>
+		<img src="images/STZ1.PNG" class="spaceterminalzero-pic-1" alt="pictue of code">
+		<p class = "spaceterminalzero-p-2">As this game is about randomizing controls the obvious place to start is the handling of said randomization. For each task (of which there are 8) the controls must be changed in the start function. For each task there are 4 possible control schemes it can be chosen to control it so a random number is selected for each task and that is used to select the control scheme for the duration of the game. The reason The game chooses one out of a set of predetermined control schemes instead of being completely random is so that each task can have a certain theme to it. For this task the user is required to type in a four letter word and the word is randomized, in other tasks the user may be asked to input a row of keys and the required row is randomized to keep a shared theme for each task between games. As well as the controls being randomized the pages of the instructions need to be set acordingly, this is done at the end of each case as the randomness is already generated and it will only occur once as it is in the start function. As you can see on the right the variables that contain the keycodes that are randomly selected at the begining of</p>
+		<img src="images/STZ2.PNG" class="spaceterminalzero-pic-2" alt="pictue of code">
+		<p class = "spaceterminalzero-p-3">the game and used for the control input when playing the game. As this task requires typing a word out, each time a correct letter is pressed a varible in incrimented which is used to check which letter can be input next as well as validating when the word is fully complete. When any task is complete a varible is changed to an integer corresponding to what task was completed and whenever this variable changes, a section of code activated that completes the necessary action to finish things like validation and animation.</p>
+		<img src="images/STZ3.PNG" class="spaceterminalzero-pic-3" alt="pictue of code">
+		<p class = "spaceterminalzero-p-4">The way that tasks are validated at the end may seem strange but it is necessary in order for the control swapping to work. Each task has a different method of inputting, a different number of required inputs and a different set of inputs that could be selected, due to all of these factors, swapping the controls for each task would be a very inefficient task. Instead of swapping the controls what we can do instead is swap what the controls for each task output, as mentioned above, when a task is completed the TaskComplete is set to be the corresponding variable of said task. In the example on the right task 1 and task 2 are swapped so we simply swap the values of their corresponding setter variables instead. To follow this example further, if someone were to follow the steps in the code above and type out WANT, when TaskComplete changed it would register as task two being completed and vice versa would happen if the second task was completed.</p>
+		<p class = "spaceterminalzero-p-5">I feel like it is worth mentioning that unlike many other projects on this site this game wasn't fully completed as it was build during a GameJam. Although it serves more of a proof of concept than a fully functioning game as it is missing a few key features like a game over screen, I am happy with what I managed to achive and the problems I managed to solve during this project.</p>
+	</div>
+		
+    <div class="footerTEST">
+		<div class="footer">
+			<div class="copyright">
+				<p>&copy; 2020. All rights reserved.</p>
+			</div>
+			
+			<img src="images/logo-sq.png" width="175" height="175" class="footer-logo" alt="website-logo">
+				
+			<div class="footer-ul-website">
+				<p>Sprob.org:</p>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="social.html">Social</a></li>
+				</ul>
+			</div>
+			
+			<div class="footer-ul-projects">
+				<p class="pro-title">Projects:</p>
+				<ul>
+					<li><a href="spaceterminalzero.html">Space terminal zero</a></li>
+					<li><a href="website.html">This website</a></li>
+					<li><a href="muddyroots.html">Muddy roots</a></li>
+					<li><a href="hangman.html">Hangman</a></li>
+					<li><a href="sandwhich.html">Sandwhich</a></li>
+				</ul>
+			</div>
+			
+			<div class="footer-ul-socials">
+				<p>Socials:</p>
+				<ul>
+					<li><a href="social.html">Email</a></li>
+					<li><a href="https://www.linkedin.com/in/samuel-robinson-9215961b1/" target="_blank">LinkedIn</a></li>
+					<li><a href="https://github.com/mrsam993?tab=projects" target="_blank">Github</a></li>
+					<li><a href="https://twitter.com/SamuelR45732281" target="_blank">Twitter</a></li>
+				</ul>
+			</div>
+		</div>
+    </div>
+  </body>
+</html>

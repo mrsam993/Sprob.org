@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body class="project-body">
+    <div class="header">
+		<ul class="header-list">
+			<a href="index.html">
+				<div class="headerL">
+					<li>Home</li>
+				</div>
+			</a>	
+			<a href="about.html">
+				<div class="headerL2">
+					<li>About</li>
+				</div>
+			</a>	
+			<a href="index.html"><img src="images/logo.png" width="220" height="63" class="logo" alt="picture of website logo"></a>
+			<a href="projects.html">
+				<div class="headerR">
+					<li>Projects</li>
+				</div>
+			</a>	
+			<a href="social.html">
+				<div class="headerR2">
+					<li>Social</li>
+				</div>
+			</a>
+		</ul>
+    </div>
+	<div class="topSANDWHICHimage">
+		<h2>Sandwhich</h2>
+    </div>
+	<img src="images/lm-side.PNG" width="15" height="1800" class="side-bar">
+    <div class="main-content">
+		<h3>The making of a sandwich maker</h3>				
+		<p class = "sandwhich-p-1">For my first assignment I was tasked to make a game in Construct 2 and I decided to make an arcade game about making sandwiches. Although it is made in Construct 2, with use of loops, arrays and programming logic I feel proud of how optimized I could make a simple game like this. Below I'll detail the systems in place, how the game works, and how it all comes together as a whole.</p>	
+		<img src="images/SW1.PNG" class="sandwhich-pic-1" alt="picture of the event sheet">
+		<p class = "sandwhich-p-2">One of the key systems in the game involves checking the ID of any made sandwich against an array of all possible orders. Unlike regular programming languages, in Construct 2 you cannot declare an array with values inside so the values have to be added manually which would usually require one line per entry which would be very inefficient. Instead of doing this I managed to assign every value of the array using a loop containing a one line equation that uses the current itteration counter to calculate a number that is assigned to each index sequentially. I won't go fully into how the algorithm works as it is partially explained in the comment but to put it simply, the itteration number is multiplied by 101 a certain number of times (which is the itteration counter divided by 8 after the remainder is removed). After that, this said remainder is multiplied by 10 and added to the total value which is assigned to the index equal to the itteration value.</p>	
+		<img src="images/SW2.PNG" class="sandwhich-pic-2" alt="picture of the event sheet">
+		<p class = "sandwhich-p-3">The other complex system worth covering in the game is the tracking of what orders are currently active on screen. The first section controls when the tasks are instantiated and uses an equation that decreases the time between instantiations depending on how long the player has lasted which is further detailed in the comment. What is more interesting is the section that tracks the position that the order will be in and what order it will be. A random number between 1 and 40 is generated and used to pick one of the possible orders, each order object has all 40 different sprites attached as frames so the corresponding frame is selected for the order. The randomly generated number is also used to get the correct ID from the array mentioned above and that number is assigned to a different array containing the current orders on screen. The position the order is spawned in and the index of the array that the ID is added to are both calculated by checking what orders (that have not already been completed) have been instantiated and the positions they are in and (starting from the left) the next free position is then picked. When the player makes a sandwich, its' ID is saved and the final section runs every frame to see if said ID is equal to any of the ID's that are in play. If a match is detected, the order is removed and the space is freed up for a new order to fill its' space.</p>
+		<p class = "sandwhich-p-4">As Construct 2 is a fairly simple engine a lot of the other systems are also fairly simple (or have already been mentioned). Despite being a simple game in a simple engine I am quite proud of how I have managed to optimize it and make a game like this work at its' maximum potential.</p>
+	</div>
+		
+    <div class="footerTEST">
+		<div class="footer">
+			<div class="copyright">
+				<p>&copy; 2020. All rights reserved.</p>
+			</div>
+			
+			<img src="images/logo-sq.png" width="175" height="175" class="footer-logo" alt="website-logo">
+				
+			<div class="footer-ul-website">
+				<p>Sprob.org:</p>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="social.html">Social</a></li>
+				</ul>
+			</div>
+			
+			<div class="footer-ul-projects">
+				<p class="pro-title">Projects:</p>
+				<ul>
+					<li><a href="spaceterminalzero.html">Space terminal zero</a></li>
+					<li><a href="website.html">This website</a></li>
+					<li><a href="muddyroots.html">Muddy roots</a></li>
+					<li><a href="hangman.html">Hangman</a></li>
+					<li><a href="sandwhich.html">Sandwhich</a></li>
+				</ul>
+			</div>
+			
+			<div class="footer-ul-socials">
+				<p>Socials:</p>
+				<ul>
+					<li><a href="social.html">Email</a></li>
+					<li><a href="https://www.linkedin.com/in/samuel-robinson-9215961b1/" target="_blank">LinkedIn</a></li>
+					<li><a href="https://github.com/mrsam993?tab=projects" target="_blank">Github</a></li>
+					<li><a href="https://twitter.com/SamuelR45732281" target="_blank">Twitter</a></li>
+				</ul>
+			</div>
+		</div>
+    </div>
+  </body>
+</html>
